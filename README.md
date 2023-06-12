@@ -10,15 +10,15 @@ Multiply all the digits of a number n by each other, repeating with the product 
 
 - **Rust Language** is used to get the best performance and memory safety.
 - **Concurrency and Multithreading** is used to speed up the process of testing the numbers.
-- **Big Integers** are used to test for numbers greater than `100`<sup>`20,000`</sup>.
+- **Big Integers** are used to test for numbers greater than `10`<sup>`20,000`</sup>.
 - **MPSC (Multi-producer, single-consumer)** is used to communicate between the main thread and the child threads.
 - **Custom Algorithm** is used to find the next best number to be tested for multiplicative persistance.
 
 ## Motivation
 
-> This repo is an attempt to create an algorithm that will test for numbers greater than `100`<sup>`20,000`</sup> [^1] for the multiplicative persistance and find a lest number with multiplicative persistance greater than `11`[^2].
+> This repo is an attempt to create an algorithm that will test for numbers greater than `10`<sup>`20,000`</sup> [^1] for the multiplicative persistance and find a lest number with multiplicative persistance greater than `11`[^2].
 
-[^1]: Numbers less than `100`<sup>`20,000`</sup> has already been tested by many and there is no number less than that has multiplicative persistance of greater than `11`.
+[^1]: Numbers less than `10`<sup>`20,000`</sup> has already been tested by many and there is no number less than that has multiplicative persistance of greater than `11`.
 [^2]: `11` is the largest known multiplicative persistance known till date.
 
 ## Algorithm
