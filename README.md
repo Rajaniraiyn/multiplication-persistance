@@ -10,13 +10,16 @@ Multiply all the digits of a number n by each other, repeating with the product 
 
 - **Rust Language** is used to get the best performance and memory safety.
 - **Concurrency and Multithreading** is used to speed up the process of testing the numbers.
-- **Big Integers** are used to test for numbers greater than `100`^`233`^.
+- **Big Integers** are used to test for numbers greater than `100`<sup>`20,000`</sup>.
 - **MPSC (Multi-producer, single-consumer)** is used to communicate between the main thread and the child threads.
 - **Custom Algorithm** is used to find the next best number to be tested for multiplicative persistance.
 
 ## Motivation
 
-> This repo is an attempt to create an algorithm that will test for numbers greater than ===`100`^`233`^ [^1]=== for the multiplicative persistance and find a lest number with multiplicative persistance greater than `11`[^2].
+> This repo is an attempt to create an algorithm that will test for numbers greater than `100`<sup>`20,000`</sup> [^1] for the multiplicative persistance and find a lest number with multiplicative persistance greater than `11`[^2].
+
+[^1]: Numbers less than `100`<sup>`20,000`</sup> has already been tested by many and there is no number less than that has multiplicative persistance of greater than `11`.
+[^2]: `11` is the largest known multiplicative persistance known till date.
 
 ## Algorithm
 
@@ -144,7 +147,7 @@ cargo run --release
 
 ## Bottlenecks
 
-Even though this algorithm is faster than the naive approach, it still has some bottlenecks. The implementation is not fully optimized and there are some places where the performance can be improved. For example, current implementation is faster and runs smoothly on CPU but the memory (RAM) usage is very high and it increases over time.
+Even though this algorithm is faster than the naive approach, it still has some bottlenecks. The implementation is not fully optimized and there are some places where the performance can be improved. For example, current implementation is faster and runs smoothly on CPU but the memory (RAM) usage is very high and it increases over no.of iterations.
 
 ## Contributing
 
@@ -153,12 +156,8 @@ Any can contribute to this project by improving the algorithm or by improving th
 
 ## Reference
 
-1. https://en.wikipedia.org/wiki/Persistence_of_a_number
-
-## Footnotes
-
-[^1]: Numbers less than `100`^`233`^ has already been tested by many and there is no number less than that has multiplicative persistance of greater than `11`.
-[^2]: `11` is the largest known multiplicative persistance known till date.
+1. *https://en.wikipedia.org/wiki/Persistence_of_a_number*
+2. *https://mathworld.wolfram.com/MultiplicativePersistence.html (**Note:** has outdated information)*
 
 ---
 
