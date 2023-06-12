@@ -139,6 +139,16 @@ fn best_next(num: &mut Vec<u8>, i: usize) {
 }
 ```
 
+### But why to ignore some digits?
+
+The digits that are ignored are the digits that are not required to be tested for multiplicative persistance. It is very obvious that the digits `0`, `1` and `5` are not required to be tested for multiplicative persistance.
+
+| Digit | Reason                                                                                                                                                                          |
+| ----- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| `0`   | `0` is the additive identity. So, the multiplicative persistance of number with `0` is `1`.                                                                                     |
+| `1`   | `1` is the multiplicative identity. So, it is not significant for multiplicative persistance                                                                                    |
+| `5`   | if we multiply any number with `5`, the last digit of the result will be either `0` or `5`. So, it is will make the multiplicative persistance to very less, around `2` or `3`. |
+
 ## Usage
 
 ```sh
