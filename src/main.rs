@@ -65,14 +65,15 @@ fn main() {
         let tx = tx.clone();
         let handle = thread::spawn(move || {
             println!("Running Thread {}", i);
-            let mut num = vec![*i; 233];
+            let mut num = vec![*i; 20_000]; // 20,000 digits is the lower bound
             let mut count: u128 = 0;
             loop {
                 let steps = mul_per_vec(&mut num.clone(), &mut 0);
                 if steps > RECORD {
+                    num.sort();
                     println!(
-                        "Found {} in with {} steps",
-                        String::from_utf8(num.clone()).unwrap(),
+                        "\nFound {} in with {} steps",
+                        num.iter().map(|&x| x.to_string()).collect::<String>(),
                         steps
                     );
                     break;
